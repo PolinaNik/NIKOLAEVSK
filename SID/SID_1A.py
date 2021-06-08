@@ -26,13 +26,6 @@ try:
 except:
     pass
 
-
-# PIKUS_route = route.Route(start_point, 108, begin_arc, 'LEFT', points.LOM, 335, 'RIGHT', 286,
-#                           points.PIKUS, 'PIKUS1A', 'sid1a_auto', gl_center, gl_rad, "RIGHT", kinks.dokir, 335)
-# RATNU_route = route.Route(start_point, 108, begin_arc, 'LEFT', points.LOM, 276, 'RIGHT', 276, points.RATNU,
-#                           'RATNU1A', 'sid1a_auto', gl_center, gl_rad, "RIGHT", kinks.dokir, 335)
-
-
 TEBSA = RoundRoute(start_point=start_point, start_bearing=108,
               begin_arc=begin_arc, turn1='RIGHT', glob_center=gl_center_down, glob_rad=gl_rad_down, kink=points.LOM,
               glob_center2 = gl_center, glob_rad2 = gl_rad, turn2='LEFT', end_bearing=310, end_point=points.TEBSA)
