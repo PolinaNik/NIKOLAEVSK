@@ -17,47 +17,49 @@ try:
 except:
     pass
 
-
-left_turn1 = ParalelRoute(start_bearing=108, begin_arc=kinks.kink_right_up, turn1='LEFT', glob_center=right_center, glob_rad=rad)
-left_turn2 = ParalelRoute(start_bearing=288, begin_arc=kinks.kink_right_down, turn1='LEFT', glob_center=left_center, glob_rad=rad)
+left_turn1 = ParalelRoute(start_bearing=108, begin_arc=kinks.kink_right_up, turn1='LEFT', glob_center=right_center,
+                          glob_rad=rad)
+left_turn2 = ParalelRoute(start_bearing=288, begin_arc=kinks.kink_right_down, turn1='LEFT', glob_center=left_center,
+                          glob_rad=rad)
 hippo2 = Hippo_right(start_bearing=288, intersection=points.VOR_DME, sector=2)
 hippo1 = Hippo_right(start_bearing=288, intersection=points.VOR_DME, sector=1)
 
-draw_route(file_name, 'RATNU1G_29', convert.to_gr(points.RATNU), convert.to_gr(kinks.ratnu_kink), convert.to_gr(points.VOR_DME),
-           hippo1.first_turn(), left_turn2.first_turn(), left_turn1.first_turn(), convert.to_gr(start_point))
+draw_route(file_name, 'RATNU1G_29', convert.to_gr(points.RATNU), convert.to_gr(kinks.ratnu_kink),
+           convert.to_gr(points.VOR_DME), hippo1.first_turn(), left_turn2.first_turn(), left_turn1.first_turn(),
+           convert.to_gr(start_point))
 
-draw_route(file_name, 'PIKUS1G_29', convert.to_gr(points.PIKUS), convert.to_gr(kinks.pikus_kink), convert.to_gr(points.VOR_DME),
-           hippo1.first_turn(), left_turn2.first_turn(), left_turn1.first_turn(), convert.to_gr(start_point))
+draw_route(file_name, 'PIKUS1G_29', convert.to_gr(points.PIKUS), convert.to_gr(kinks.pikus_kink),
+           convert.to_gr(points.VOR_DME), hippo1.first_turn(), left_turn2.first_turn(), left_turn1.first_turn(),
+           convert.to_gr(start_point))
 
-draw_route(file_name, 'TEBSA1G_29', convert.to_gr(points.TEBSA), convert.to_gr(kinks.tebsa_kink), convert.to_gr(points.VOR_DME),
-           hippo2.first_turn(), left_turn2.first_turn(), left_turn1.first_turn(), convert.to_gr(start_point))
+draw_route(file_name, 'TEBSA1G_29', convert.to_gr(points.TEBSA), convert.to_gr(kinks.tebsa_kink),
+           convert.to_gr(points.VOR_DME), hippo2.first_turn(), left_turn2.first_turn(), left_turn1.first_turn(),
+           convert.to_gr(start_point))
 
-draw_route(file_name, 'TOTRU1G_29', convert.to_gr(points.TOTRU), convert.to_gr(kinks.totru_kink), convert.to_gr(points.VOR_DME),
-           hippo2.first_turn(), left_turn2.first_turn(), left_turn1.first_turn(), convert.to_gr(start_point))
+draw_route(file_name, 'TOTRU1G_29', convert.to_gr(points.TOTRU), convert.to_gr(kinks.totru_kink),
+           convert.to_gr(points.VOR_DME), hippo2.first_turn(), left_turn2.first_turn(), left_turn1.first_turn(),
+           convert.to_gr(start_point))
 
-draw_route(file_name, 'DOKIR1G_29', convert.to_gr(points.DOKIR), convert.to_gr(kinks.dokir_kink), convert.to_gr(points.VOR_DME),
-        left_turn2.first_turn(), left_turn1.first_turn(), convert.to_gr(start_point))
+draw_route(file_name, 'DOKIR1G_29', convert.to_gr(points.DOKIR), convert.to_gr(kinks.dokir_kink),
+           convert.to_gr(points.VOR_DME), left_turn2.first_turn(), left_turn1.first_turn(), convert.to_gr(start_point))
 
-draw_route(file_name, 'KIZON1G_29', convert.to_gr(points.KIZON), convert.to_gr(kinks.kizon_kink), convert.to_gr(points.VOR_DME),
-         left_turn2.first_turn(), left_turn1.first_turn(), convert.to_gr(start_point))
+draw_route(file_name, 'KIZON1G_29', convert.to_gr(points.KIZON), convert.to_gr(kinks.kizon_kink),
+           convert.to_gr(points.VOR_DME), left_turn2.first_turn(), left_turn1.first_turn(), convert.to_gr(start_point))
 
-draw_route(file_name, 'NOKDA1G_29', convert.to_gr(points.NOKDA), convert.to_gr(kinks.nokda_kink), convert.to_gr(points.VOR_DME),
-            left_turn2.first_turn(), left_turn1.first_turn(), convert.to_gr(start_point))
+draw_route(file_name, 'NOKDA1G_29', convert.to_gr(points.NOKDA), convert.to_gr(kinks.nokda_kink),
+           convert.to_gr(points.VOR_DME), left_turn2.first_turn(), left_turn1.first_turn(), convert.to_gr(start_point))
 
-draw_route(file_name, 'GIGOR1G_29', convert.to_gr(points.GIGOR), convert.to_gr(kinks.gigor_kink), convert.to_gr(points.VOR_DME),
-            left_turn2.first_turn(), left_turn1.first_turn(), convert.to_gr(start_point))
+draw_route(file_name, 'GIGOR1G_29', convert.to_gr(points.GIGOR), convert.to_gr(kinks.gigor_kink),
+           convert.to_gr(points.VOR_DME), left_turn2.first_turn(), left_turn1.first_turn(), convert.to_gr(start_point))
 
-draw_route(file_name, 'OSBET1G_29', convert.to_gr(points.OSBET), convert.to_gr(kinks.osbet_kink), convert.to_gr(points.VOR_DME),
-         hippo1.first_turn(), left_turn2.first_turn(), left_turn1.first_turn(), convert.to_gr(start_point))
+draw_route(file_name, 'OSBET1G_29', convert.to_gr(points.OSBET), convert.to_gr(kinks.osbet_kink),
+           convert.to_gr(points.VOR_DME), hippo1.first_turn(), left_turn2.first_turn(), left_turn1.first_turn(),
+           convert.to_gr(start_point))
 
-draw_route(file_name, 'LIRSA1G_29', convert.to_gr(points.LIRSA), convert.to_gr(kinks.lirsa_kink), convert.to_gr(points.VOR_DME),
-         hippo1.first_turn(), left_turn2.first_turn(), left_turn1.first_turn(), convert.to_gr(start_point))
+draw_route(file_name, 'LIRSA1G_29', convert.to_gr(points.LIRSA), convert.to_gr(kinks.lirsa_kink),
+           convert.to_gr(points.VOR_DME), hippo1.first_turn(), left_turn2.first_turn(), left_turn1.first_turn(),
+           convert.to_gr(start_point))
 
-draw_route(file_name, 'LEKBI1G_29', convert.to_gr(points.LEKBI), convert.to_gr(kinks.lekbi_kink), convert.to_gr(points.VOR_DME),
-         hippo1.first_turn(), left_turn2.first_turn(), left_turn1.first_turn(), convert.to_gr(start_point))
-
-
-
-
-
-
+draw_route(file_name, 'LEKBI1G_29', convert.to_gr(points.LEKBI), convert.to_gr(kinks.lekbi_kink),
+           convert.to_gr(points.VOR_DME), hippo1.first_turn(), left_turn2.first_turn(), left_turn1.first_turn(),
+           convert.to_gr(start_point))

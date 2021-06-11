@@ -11,5 +11,5 @@ def bearing(cord1, cord2):
     f2 = radians(cord2[0])
     l2 = radians(cord2[1])
     dl = l2 - l1
-    bearing = atan2(sin(dl)*cos(f2), cos(f1)*sin(f2)-sin(f1)*cos(f2)*cos(dl))
+    bearing = atan2(sin(dl) * cos(f2), cos(f1) * sin(f2) - sin(f1) * cos(f2) * cos(dl))
     return change_angle(degrees(bearing))

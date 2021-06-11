@@ -1,6 +1,5 @@
 from instruments import converter as convert
 
-
 NN001 = convert.str_to_gr('530405'), convert.str_to_gr('1402028')
 NN002 = convert.str_to_gr('531035'), convert.str_to_gr('1401115')
 NN003 = convert.str_to_gr('531607'), convert.str_to_gr('1402204')

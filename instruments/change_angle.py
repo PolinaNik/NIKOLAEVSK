@@ -7,4 +7,3 @@ def change_angle(angle):
         return angle - 360
     else:
         return angle
-

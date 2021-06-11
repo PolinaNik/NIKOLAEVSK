@@ -18,15 +18,15 @@ class SimpleRoute:
         kink = self.param_dict["kink"]
         begin_arc = self.param_dict["begin_arc"]
         turn = self.param_dict["turn"]
-        start_bearing = change_angle(self.param_dict["start_bearing"]-13)
+        start_bearing = change_angle(self.param_dict["start_bearing"] - 13)
         turn_bearing = int(change_angle(bearing(end_point, kink)))
         intersection = intersection_point(begin_arc, kink, start_bearing,
-                                                    turn_bearing)
+                                          turn_bearing)
         radius = distance(begin_arc, intersection)
-        end_arc = destination_point(intersection, change_angle(turn_bearing+180), radius)
+        end_arc = destination_point(intersection, change_angle(turn_bearing + 180), radius)
         if turn == 'LEFT':
             center = intersection_point(end_arc, begin_arc, change_angle(turn_bearing + 90),
-                                                  change_angle(start_bearing - 90))
+                                        change_angle(start_bearing - 90))
             kink_radius = distance(center, end_arc)
 
             arc = create_arc(change_angle(turn_bearing - 90), change_angle(start_bearing + 90), step, center,
@@ -36,9 +36,10 @@ class SimpleRoute:
             return arc_points
         else:
             center = intersection_point(end_arc, begin_arc, change_angle(turn_bearing - 90),
-                                                  change_angle(start_bearing + 90))
+                                        change_angle(start_bearing + 90))
 
             kink_radius = distance(center, end_arc)
-            arc = create_arc(change_angle(start_bearing - 90), change_angle(turn_bearing + 90), step, center, kink_radius)
+            arc = create_arc(change_angle(start_bearing - 90), change_angle(turn_bearing + 90), step, center,
+                             kink_radius)
             arc_points = [convert.to_gr(arc[num]) for num, item in enumerate(arc)]
             return arc_points

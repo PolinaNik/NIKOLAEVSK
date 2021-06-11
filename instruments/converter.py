@@ -20,11 +20,11 @@ def str_to_gr(cord):
         result = E_gr + E_min + E_sec
         return result
 
+
 def slds_to_gr(cord):
     lat = cord[1:7]
     lon = cord[10:17]
     return str_to_gr(lat), str_to_gr(lon)
-
 
 
 def geo_to_flat(lat, lon):
@@ -38,7 +38,6 @@ def geo_to_flat(lat, lon):
 def flat_to_geo(x, y):
     """ Переводит плоские координаты в геодезические lat, lon
     Возвращает кортеж (53.336111111111116, 140.72472222222223)"""
-
 
     trans_group = TransformerGroup("epsg:28424", "epsg:4326")
     return trans_group.transformers[0].transform(x, y)

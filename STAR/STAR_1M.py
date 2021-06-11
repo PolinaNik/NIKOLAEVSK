@@ -28,5 +28,4 @@ draw_route(file_name, 'RATNU1M', convert.to_gr(points.RATNU), convert.to_gr(rnav
 draw_route(file_name, 'PIKUS1M', convert.to_gr(points.PIKUS), convert.to_gr(rnav_points.NN018),
            convert.to_gr(rnav_points.NN019), convert.to_gr(rnav_points.NN013))
 
-
 draw_point(file_name, rnav_points.NN011, rnav_points.NN012, rnav_points.NN013, rnav_points.NN017, rnav_points.NN018)

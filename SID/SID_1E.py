@@ -22,8 +22,8 @@ except:
     pass
 
 TEBSA = ParalelRoute(start_point=start_point, start_bearing=108,
-              begin_arc=begin_arc, turn1='LEFT', glob_center=gl_center_up, glob_rad=gl_rad_up, kink=kinks.tebsa,
-              kink_bearing=290, turn2='RIGHT', end_bearing=347, end_point=points.TEBSA)
+                     begin_arc=begin_arc, turn1='LEFT', glob_center=gl_center_up, glob_rad=gl_rad_up, kink=kinks.tebsa,
+                     kink_bearing=290, turn2='RIGHT', end_bearing=347, end_point=points.TEBSA)
 
 TOTRU = SimpleRoute(start_point=start_point, start_bearing=108,
                     begin_arc=begin_arc, turn="LEFT", kink=kinks.totru, end_point=points.TOTRU)
@@ -50,34 +50,44 @@ LEKBI = SimpleRoute(start_point=start_point, start_bearing=108,
                     begin_arc=begin_arc, turn="RIGHT", kink=kinks.lekbi, end_point=points.LEKBI)
 
 RATNU = ParalelRoute(start_point=start_point, start_bearing=108,
-              begin_arc=begin_arc, turn1='RIGHT', glob_center=gl_center_down, glob_rad=gl_rad_down, kink=kinks.ratnu,
-              kink_bearing=290, turn2='RIGHT', end_bearing=347, end_point=points.RATNU)
+                     begin_arc=begin_arc, turn1='RIGHT', glob_center=gl_center_down, glob_rad=gl_rad_down,
+                     kink=kinks.ratnu,
+                     kink_bearing=290, turn2='RIGHT', end_bearing=347, end_point=points.RATNU)
 
 PIKUS = ParalelRoute(start_point=start_point, start_bearing=108,
-              begin_arc=begin_arc, turn1='RIGHT', glob_center=gl_center_down, glob_rad=gl_rad_down, kink=kinks.pikus,
-              kink_bearing=290, turn2='RIGHT', end_bearing=347, end_point=points.PIKUS)
+                     begin_arc=begin_arc, turn1='RIGHT', glob_center=gl_center_down, glob_rad=gl_rad_down,
+                     kink=kinks.pikus,
+                     kink_bearing=290, turn2='RIGHT', end_bearing=347, end_point=points.PIKUS)
 
+draw_route(file_name, 'TEBSA1E', convert.to_gr(start_point), convert.to_gr(begin_arc), TEBSA.first_turn(),
+           convert.to_gr(points.TEBSA))
 
-draw_route(file_name, 'TEBSA1E', convert.to_gr(start_point), convert.to_gr(begin_arc), TEBSA.first_turn(), convert.to_gr(points.TEBSA))
+draw_route(file_name, 'TOTRU1E', convert.to_gr(start_point), convert.to_gr(begin_arc), TOTRU.first_turn(),
+           convert.to_gr(points.TOTRU))
 
-draw_route(file_name, 'TOTRU1E', convert.to_gr(start_point), convert.to_gr(begin_arc), TOTRU.first_turn(), convert.to_gr(points.TOTRU))
+draw_route(file_name, 'DOKIR1E', convert.to_gr(start_point), convert.to_gr(begin_arc), DOKIR.first_turn(),
+           convert.to_gr(points.DOKIR))
 
-draw_route(file_name, 'DOKIR1E', convert.to_gr(start_point), convert.to_gr(begin_arc), DOKIR.first_turn(), convert.to_gr(points.DOKIR))
+draw_route(file_name, 'KIZON1E', convert.to_gr(start_point), convert.to_gr(begin_arc), KIZON.first_turn(),
+           convert.to_gr(points.KIZON))
 
-draw_route(file_name, 'KIZON1E', convert.to_gr(start_point), convert.to_gr(begin_arc), KIZON.first_turn(), convert.to_gr(points.KIZON))
+draw_route(file_name, 'NOKDA1E', convert.to_gr(start_point), convert.to_gr(begin_arc), NOKDA.first_turn(),
+           convert.to_gr(points.NOKDA))
 
-draw_route(file_name, 'NOKDA1E', convert.to_gr(start_point), convert.to_gr(begin_arc), NOKDA.first_turn(), convert.to_gr(points.NOKDA))
+draw_route(file_name, 'GIGOR1E', convert.to_gr(start_point), convert.to_gr(begin_arc), GIGOR.first_turn(),
+           convert.to_gr(points.GIGOR))
 
-draw_route(file_name, 'GIGOR1E', convert.to_gr(start_point), convert.to_gr(begin_arc), GIGOR.first_turn(), convert.to_gr(points.GIGOR))
+draw_route(file_name, 'OSBET1E', convert.to_gr(start_point), convert.to_gr(begin_arc), OSBET.first_turn(),
+           convert.to_gr(points.OSBET))
 
-draw_route(file_name, 'OSBET1E', convert.to_gr(start_point), convert.to_gr(begin_arc), OSBET.first_turn(), convert.to_gr(points.OSBET))
+draw_route(file_name, 'LIRSA1E', convert.to_gr(start_point), convert.to_gr(begin_arc), LIRSA.first_turn(),
+           convert.to_gr(points.LIRSA))
 
-draw_route(file_name, 'LIRSA1E', convert.to_gr(start_point), convert.to_gr(begin_arc), LIRSA.first_turn(), convert.to_gr(points.LIRSA))
+draw_route(file_name, 'LEKBI1E', convert.to_gr(start_point), convert.to_gr(begin_arc), LEKBI.first_turn(),
+           convert.to_gr(points.LEKBI))
 
-draw_route(file_name, 'LEKBI1E', convert.to_gr(start_point), convert.to_gr(begin_arc), LEKBI.first_turn(), convert.to_gr(points.LEKBI))
+draw_route(file_name, 'RATNU1E', convert.to_gr(start_point), convert.to_gr(begin_arc), RATNU.first_turn(),
+           convert.to_gr(points.RATNU))
 
-draw_route(file_name, 'RATNU1E', convert.to_gr(start_point), convert.to_gr(begin_arc), RATNU.first_turn(), convert.to_gr(points.RATNU))
-
-draw_route(file_name, 'PIKUS1E', convert.to_gr(start_point), convert.to_gr(begin_arc), PIKUS.first_turn(), convert.to_gr(points.PIKUS))
-
-
+draw_route(file_name, 'PIKUS1E', convert.to_gr(start_point), convert.to_gr(begin_arc), PIKUS.first_turn(),
+           convert.to_gr(points.PIKUS))

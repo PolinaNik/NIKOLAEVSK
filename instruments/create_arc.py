@@ -1,5 +1,6 @@
 from instruments.destination_point import destination_point
 
+
 def create_arc(start_angle, end_angle, step, center, radius):
     point_list = []
     if start_angle < end_angle:
@@ -15,4 +16,3 @@ def create_arc(start_angle, end_angle, step, center, radius):
             point = destination_point(center, az, radius)
             point_list.append(point)
         return point_list
-
