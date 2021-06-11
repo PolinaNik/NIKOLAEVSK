@@ -18,3 +18,4 @@ pikus_kink = destination_point(points.VOR_DME, (105+180-13), 60)
 
 kink_left_down = convert.str_to_gr('530605'), convert.str_to_gr('1403550')
 kink_right_up = convert.str_to_gr('530845'), convert.str_to_gr('1404430')
+kink_right_down = convert.str_to_gr('530607'), convert.str_to_gr('1404200')

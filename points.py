@@ -58,8 +58,14 @@ glob_radius_sid1f_down = distance(glob_center_sid1f_down, (convert.str_to_gr('53
 glob_center_sid1f_up = convert.str_to_gr('531145'), convert.str_to_gr('1403130')
 glob_radius_sid1f_up = distance(glob_center_sid1f_up, (convert.str_to_gr('530930'), convert.str_to_gr('1403115')))
 
-center_star_1g_11 = convert.str_to_gr('530730'), convert.str_to_gr('1404055')
-rad_star_1g_11 = distance(center_star_1g_11, VOR_DME)
-
+right_center_star_1g_11 = convert.str_to_gr('530730'), convert.str_to_gr('1404055')
+rad_star_1g_11 = distance(right_center_star_1g_11, VOR_DME)
 left_center_star_1g_11 = convert.str_to_gr('530745'), convert.str_to_gr('1403520')
-right_center_star_1g_11 = convert.str_to_gr('530725'), convert.str_to_gr('1404500')
+
+right_center_star_1g_29 = convert.str_to_gr('530725'), convert.str_to_gr('1404507')
+left_center_star_1g_29 = convert.str_to_gr('530745'), convert.str_to_gr('1404055')
+rad_star_1g_29 = distance(left_center_star_1g_29, VOR_DME)
+
+left_center_star_1h = convert.str_to_gr('530730'), convert.str_to_gr('1404300')
+right_center_star_1h = convert.str_to_gr('530710'), convert.str_to_gr('1404750')
+rad_star_1h = distance(left_center_star_1h, LOM)
