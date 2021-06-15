@@ -65,15 +65,15 @@ LEKBI = ParalelRoute(start_point=start_point, start_bearing=108,
                      kink_bearing=302, turn2='LEFT', end_bearing=230, end_point=points.LEKBI)
 
 RATNU = RoundRoute(start_point=start_point, start_bearing=108,
-                   begin_arc=begin_arc, turn1='LEFT', glob_center=gl_center_up, glob_rad=gl_rad_up, kink=points.LOM,
+                   begin_arc=begin_arc, turn1='LEFT', glob_center=gl_center_up, glob_rad=gl_rad_up, kink=points.VOR_DME,
                    glob_center2=gl_center, glob_rad2=gl_rad, turn2='RIGHT', end_bearing=275, end_point=points.RATNU)
 
 PIKUS = RoundRoute(start_point=start_point, start_bearing=108,
-                   begin_arc=begin_arc, turn1='LEFT', glob_center=gl_center_up, glob_rad=gl_rad_up, kink=points.LOM,
+                   begin_arc=begin_arc, turn1='LEFT', glob_center=gl_center_up, glob_rad=gl_rad_up, kink=points.VOR_DME,
                    glob_center2=gl_center, glob_rad2=gl_rad, turn2='RIGHT', end_bearing=286, end_point=points.PIKUS)
 
 draw_route(file_name, 'TEBSA1B', convert.to_gr(start_point), convert.to_gr(begin_arc), TEBSA.first_turn(),
-           convert.to_gr(points.LOM),
+           convert.to_gr(points.VOR_DME),
            TEBSA.glob_round(), TEBSA.second_turn(), convert.to_gr(points.TEBSA))
 
 draw_route(file_name, 'TOTRU1B', convert.to_gr(start_point), convert.to_gr(begin_arc), TOTRU.first_turn(),
@@ -109,9 +109,9 @@ draw_route(file_name, 'LEKBI1B', convert.to_gr(start_point), convert.to_gr(begin
            LEKBI.second_turn(), convert.to_gr(points.LEKBI))
 
 draw_route(file_name, 'RATNU1B', convert.to_gr(start_point), convert.to_gr(begin_arc), RATNU.first_turn(),
-           convert.to_gr(points.LOM),
+           convert.to_gr(points.VOR_DME),
            RATNU.glob_round(), RATNU.second_turn(), convert.to_gr(points.RATNU))
 
 draw_route(file_name, 'PIKUS1B', convert.to_gr(start_point), convert.to_gr(begin_arc), PIKUS.first_turn(),
-           convert.to_gr(points.LOM),
+           convert.to_gr(points.VOR_DME),
            PIKUS.glob_round(), PIKUS.second_turn(), convert.to_gr(points.PIKUS))

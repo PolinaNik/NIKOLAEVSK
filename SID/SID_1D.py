@@ -88,7 +88,7 @@ draw_route(file_name, 'TOTRU1D', convert.to_gr(start_point), convert.to_gr(begin
 
 draw_route(file_name, 'DOKIR1D', convert.to_gr(start_point), convert.to_gr(begin_arc), DOKIR.first_round(),
            convert.to_gr(points.VOR_DME),
-           DOKIR.glob_round(), DOKIR.second_turn(), convert.to_gr(points.DOKIR))
+           DOKIR.glob_round(), DOKIR.second_turn()[1:], convert.to_gr(points.DOKIR))
 
 draw_route(file_name, 'KIZON1D', convert.to_gr(start_point), convert.to_gr(begin_arc), KIZON.first_round(),
            convert.to_gr(points.VOR_DME),

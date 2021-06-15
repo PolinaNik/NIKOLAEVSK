@@ -56,7 +56,7 @@ draw_route(file_name, 'OSBET1G_29', convert.to_gr(points.OSBET), convert.to_gr(k
            convert.to_gr(points.VOR_DME), hippo1.first_turn(), left_turn2.first_turn(), left_turn1.first_turn(),
            convert.to_gr(start_point))
 
-draw_route(file_name, 'LIRSA1G_29', convert.to_gr(points.LIRSA), convert.to_gr(kinks.lirsa_kink),
+draw_route(file_name, 'LIRSA1G_29', convert.to_gr(points.LIRSA),
            convert.to_gr(points.VOR_DME), hippo1.first_turn(), left_turn2.first_turn(), left_turn1.first_turn(),
            convert.to_gr(start_point))
 
