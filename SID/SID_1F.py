@@ -2,7 +2,7 @@ import points
 from instruments.simple_route import SimpleRoute
 from instruments.paralel_route import ParalelRoute
 from instruments import converter as convert
-from instruments.draw_route import draw_route
+from instruments.draw_route import draw_route, draw_route_tr
 import SID.kinks.kinks_sid1f as kinks
 import os
 
@@ -17,6 +17,13 @@ file_name = 'uhnn_sid(1f)'
 
 try:
     os.remove(f'{file_name}.sld')
+except:
+    pass
+
+file_name_tr = 'uhnn_sid(1f)_tr'
+
+try:
+    os.remove(f'{file_name_tr}.txt')
 except:
     pass
 
@@ -76,3 +83,35 @@ draw_route(file_name, 'LEKBI1F', convert.to_gr(start_point), convert.to_gr(begin
 draw_route(file_name, 'RATNU1F', convert.to_gr(start_point), convert.to_gr(begin_arc), convert.to_gr(points.RATNU))
 
 draw_route(file_name, 'PIKUS1F', convert.to_gr(start_point), convert.to_gr(begin_arc), convert.to_gr(points.PIKUS))
+
+###################################################################################################################
+
+draw_route_tr(file_name_tr, 'TEBSA1F', convert.to_gr(start_point), convert.to_gr(begin_arc), convert.to_gr(points.TEBSA))
+
+draw_route_tr(file_name_tr, 'TOTRU1F', convert.to_gr(start_point), convert.to_gr(begin_arc), TOTRU.first_turn(),
+           convert.to_gr(points.TOTRU))
+
+draw_route_tr(file_name_tr, 'DOKIR1F', convert.to_gr(start_point), convert.to_gr(begin_arc), DOKIR.first_turn(),
+           convert.to_gr(points.DOKIR))
+
+draw_route_tr(file_name_tr, 'KIZON1F', convert.to_gr(start_point), convert.to_gr(begin_arc), KIZON.first_turn(),
+           convert.to_gr(points.KIZON))
+
+draw_route_tr(file_name_tr, 'NOKDA1F', convert.to_gr(start_point), convert.to_gr(begin_arc), NOKDA.first_turn(),
+           convert.to_gr(points.NOKDA))
+
+draw_route_tr(file_name_tr, 'GIGOR1F', convert.to_gr(start_point), convert.to_gr(begin_arc), GIGOR.first_turn(),
+           convert.to_gr(points.GIGOR))
+
+draw_route_tr(file_name_tr, 'OSBET1F', convert.to_gr(start_point), convert.to_gr(begin_arc), OSBET.first_turn()[:-2],
+           convert.to_gr(points.OSBET))
+
+draw_route_tr(file_name_tr, 'LIRSA1F', convert.to_gr(start_point), convert.to_gr(begin_arc), LIRSA.first_turn(),
+           convert.to_gr(points.LIRSA))
+
+draw_route_tr(file_name_tr, 'LEKBI1F', convert.to_gr(start_point), convert.to_gr(begin_arc), LEKBI.first_turn(),
+           convert.to_gr(points.LEKBI))
+
+draw_route_tr(file_name_tr, 'RATNU1F', convert.to_gr(start_point), convert.to_gr(begin_arc), convert.to_gr(points.RATNU))
+
+draw_route_tr(file_name_tr, 'PIKUS1F', convert.to_gr(start_point), convert.to_gr(begin_arc), convert.to_gr(points.PIKUS))

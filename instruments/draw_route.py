@@ -1,3 +1,5 @@
+from instruments import converter as convert
+
 def draw_route(file_name, route_name, *args):
     draw_list = []
     for arg in args:
@@ -12,3 +14,21 @@ def draw_route(file_name, route_name, *args):
         file.write(f'L: *{route_name}* ' + to_list[0] + '\n')
         for item in to_list[1:]:
             file.write(', ' + item + '\n')
+
+
+def draw_route_tr(file_name, route_name, *args):
+    draw_list = []
+    for arg in args:
+        if type(arg) is str:
+            draw_list += [arg]
+        else:
+            lenght = len(arg)
+            middle = int(lenght/2)
+            draw_list += [arg[0]]
+            draw_list += [arg[middle]]
+            draw_list += [arg[-1]]
+    with open(f"{file_name}.txt", 'a+') as file:
+        file.write(f'{route_name}\n')
+        for num, item in enumerate(draw_list):
+            file.write(f'{route_name}{num}   ' + convert.str_to_tren(item) + '\n')
+        file.write('\n')

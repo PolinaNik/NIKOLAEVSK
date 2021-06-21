@@ -4,7 +4,7 @@ from instruments.change_angle import change_angle
 from instruments.intersection_point import intersection_point
 from instruments.create_arc import create_arc
 from instruments import converter as convert
-from config import step
+step = 45
 
 
 class ParalelRoute:

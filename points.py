@@ -1,5 +1,7 @@
 from instruments import converter as convert
 from instruments.distance import distance
+from instruments.destination_point import destination_point
+import rnav_points
 
 DOKIR = convert.str_to_gr('534547'), convert.str_to_gr('1405221')
 GIGOR = convert.str_to_gr('532035'), convert.str_to_gr('1414806')
@@ -15,6 +17,12 @@ TOTRU = convert.str_to_gr('534406'), convert.str_to_gr('1401457')
 
 LOM = convert.str_to_gr('530903'), convert.str_to_gr('1404329')
 VOR_DME = convert.str_to_gr('530908'), convert.str_to_gr('1404117')
+
+FAP_FAV_108 = destination_point(VOR_DME, (108-13+180), 13)
+SDF_108 = destination_point(VOR_DME, (108-13+180), 8.8)
+RW11 = convert.str_to_gr('530917'), convert.str_to_gr('1403814')
+RW29 = convert.str_to_gr('530912'), convert.str_to_gr('1403954')
+
 
 glob_center_sid1a = convert.str_to_gr('530905'), convert.str_to_gr('1403840')
 glob_radius_sid1a = distance(glob_center_sid1a, LOM)
@@ -69,3 +77,6 @@ rad_star_1g_29 = distance(left_center_star_1g_29, VOR_DME)
 left_center_star_1h = convert.str_to_gr('530730'), convert.str_to_gr('1404300')
 right_center_star_1h = convert.str_to_gr('530710'), convert.str_to_gr('1404750')
 rad_star_1h = distance(left_center_star_1h, LOM)
+
+rnav_center_right = convert.str_to_gr('530600'), convert.str_to_gr('1405100')
+rnav_rad_right = distance(rnav_center_right, rnav_points.NN006)

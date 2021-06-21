@@ -12,7 +12,6 @@ def draw_point(file_name, *cords):
     for i in args:
         if i.find('=') != -1:
             names.append(i.split('=')[1].strip())
-
         else:
             names.append(i)
     names = names[1:]

@@ -45,6 +45,9 @@ def flat_to_geo(x, y):
 
 # Перевод десятичных градусов в градусы, минуты и секунды
 def to_gr(line):
+
+    """Перевод координат в читаемую форму для файлов SLD"""
+
     f = float(line[0])
     l = float(line[1])
     f_gr = math.trunc(f)
@@ -67,3 +70,31 @@ def to_gr(line):
     l = 'E' + l_gr + l_min + l_sec + l_mili
     coord = f + l
     return coord
+
+
+# Перевод десятичных градусов в градусы, минуты и секунды
+def to_gr_tren(line):
+
+    """Перевод координат в читаемую форму для тренажера"""
+
+    f = float(line[0])
+    l = float(line[1])
+    f_gr = math.trunc(f)
+    l_gr = math.trunc(l)
+    f_min = math.trunc((f - f_gr) * 60)
+    l_min = math.trunc((l - l_gr) * 60)
+    f_sec = math.trunc(((f - f_gr) * 60 - f_min) * 60)
+    l_sec = math.trunc(((l - l_gr) * 60 - l_min) * 60)
+    f_gr = str(f_gr).rjust(2, '0')
+    l_gr = str(l_gr).rjust(3, '0')
+    f_min = str(f_min).rjust(2, '0')
+    l_min = str(l_min).rjust(2, '0')
+    f_sec = str(f_sec).rjust(2, '0')
+    l_sec = str(l_sec).rjust(2, '0')
+    coord = f'N{f_gr}:{f_min}:{f_sec} E{l_gr}:{l_min}:{l_sec}'
+    return coord
+
+
+def str_to_tren(cord):
+    return f'N{cord[1:3]}:{cord[3:5]}:{cord[5:7]} E{cord[10:13]}:{cord[13:15]}:{cord[15:17]}'
+

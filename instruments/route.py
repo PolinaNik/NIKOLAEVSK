@@ -72,3 +72,37 @@ class Route:
             arc_points = [convert.to_gr(arc[num]) for num, item in enumerate(arc)]
             arc_points.reverse()
             return arc_points
+
+
+class RNAVRoute:
+    def __init__(self, **params):
+        self.param_dict = {item: name for item, name in params.items()}
+
+    def first_turn(self):
+        begin_arc = self.param_dict["begin_arc"]
+        kink = self.param_dict["kink"]
+        start_bearing = change_angle(self.param_dict["start_bearing"] - 13)
+        kink_bearing = change_angle(self.param_dict["kink_bearing"] - 13)
+        intersection = intersection_point(begin_arc, kink, start_bearing, change_angle(kink_bearing + 180))
+        radius = distance(begin_arc, intersection)
+        end_arc = destination_point(intersection, kink_bearing, radius)
+        turn1 = self.param_dict["turn1"]
+        if turn1 == 'LEFT':
+            center = intersection_point(end_arc, begin_arc, change_angle(kink_bearing - 90),
+                                        change_angle(start_bearing - 90))
+            kink_radius = distance(center, end_arc)
+
+            arc = create_arc(change_angle(kink_bearing + 90), change_angle(start_bearing + 90), step, center,
+                             kink_radius)
+            arc.reverse()
+            arc_points = [convert.to_gr(arc[num]) for num, item in enumerate(arc)]
+            return arc_points
+        else:
+            center = intersection_point(end_arc, begin_arc, change_angle(kink_bearing + 90),
+                                        change_angle(start_bearing + 90))
+
+            kink_radius = distance(center, end_arc)
+            arc = create_arc(change_angle(start_bearing - 90), change_angle(kink_bearing - 90), step, center,
+                             kink_radius)
+            arc_points = [convert.to_gr(arc[num]) for num, item in enumerate(arc)]
+            return arc_points
