@@ -83,8 +83,10 @@ def to_gr_tren(line):
     l_gr = math.trunc(l)
     f_min = math.trunc((f - f_gr) * 60)
     l_min = math.trunc((l - l_gr) * 60)
-    f_sec = math.trunc(((f - f_gr) * 60 - f_min) * 60)
-    l_sec = math.trunc(((l - l_gr) * 60 - l_min) * 60)
+    f_sec = math.ceil(((f - f_gr) * 60 - f_min) * 60)
+    print(f_sec)
+    l_sec = math.ceil(((l - l_gr) * 60 - l_min) * 60)
+    print(l_sec)
     f_gr = str(f_gr).rjust(2, '0')
     l_gr = str(l_gr).rjust(3, '0')
     f_min = str(f_min).rjust(2, '0')
@@ -96,5 +98,9 @@ def to_gr_tren(line):
 
 
 def str_to_tren(cord):
-    return f'N{cord[1:3]}:{cord[3:5]}:{cord[5:7]} E{cord[10:13]}:{cord[13:15]}:{cord[15:17]}'
+    return f'{cord[1:3]}N:{cord[3:5]}:{cord[5:7]} E{cord[10:13]}:{cord[13:15]}:{cord[15:17]}E'
+
+
+def str_to_tren2(cord):
+    return f'{cord[0][0:2]}:{cord[0][2:4]}:{cord[0][4:6]}N {cord[1][0:3]}:{cord[1][3:5]}:{cord[1][5:7]}E'
 

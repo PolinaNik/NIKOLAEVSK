@@ -1,5 +1,6 @@
 import points
 import rnav_points
+import cords
 import os
 from instruments import converter as convert
 from instruments.draw_route import draw_route
@@ -20,11 +21,11 @@ draw_route(file_name, 'TEBSA1M', convert.to_gr(points.TEBSA), convert.to_gr(rnav
 
 TEBSA_1M = {
     'TEBSA1M': [
-        {'TEBSA': convert.to_gr_tren(points.TEBSA)},
-        {'NN011': convert.to_gr_tren(rnav_points.NN011)},
-        {'NN008': convert.to_gr_tren(rnav_points.NN008)},
-        {'NN009': convert.to_gr_tren(rnav_points.NN009)},
-        {'RW29': convert.to_gr_tren(points.RW29)}
+        {'TEBSA': convert.str_to_tren2(cords.TEBSA)},
+        {'NN011': convert.str_to_tren2(cords.NN011)},
+        {'NN008': convert.str_to_tren2(cords.NN008)},
+        {'NN009': convert.str_to_tren2(cords.NN009)},
+        {'RW29': convert.str_to_tren2(cords.RW29)}
 ]
 }
 
@@ -35,11 +36,11 @@ draw_route(file_name, 'TOTRU1M', convert.to_gr(points.TOTRU), convert.to_gr(rnav
 
 TOTRU_1M = {
     'TOTRU1M': [
-        {'TOTRU': convert.to_gr_tren(points.TOTRU)},
-        {'NN011': convert.to_gr_tren(rnav_points.NN011)},
-        {'NN008': convert.to_gr_tren(rnav_points.NN008)},
-        {'NN009': convert.to_gr_tren(rnav_points.NN009)},
-        {'RW29': convert.to_gr_tren(points.RW29)}
+        {'TOTRU': convert.str_to_tren2(cords.TOTRU)},
+        {'NN011': convert.str_to_tren2(cords.NN011)},
+        {'NN008': convert.str_to_tren2(cords.NN008)},
+        {'NN009': convert.str_to_tren2(cords.NN009)},
+        {'RW29': convert.str_to_tren2(cords.RW29)}
 ]
 }
 
@@ -50,11 +51,11 @@ draw_route(file_name, 'DOKIR1M', convert.to_gr(points.DOKIR), convert.to_gr(rnav
 
 DOKIR_1M = {
     'DOKIR1M': [
-        {'DOKIR': convert.to_gr_tren(points.DOKIR)},
-        {'NN011': convert.to_gr_tren(rnav_points.NN011)},
-        {'NN008': convert.to_gr_tren(rnav_points.NN008)},
-        {'NN009': convert.to_gr_tren(rnav_points.NN009)},
-        {'RW29': convert.to_gr_tren(points.RW29)}
+        {'DOKIR': convert.str_to_tren2(cords.DOKIR)},
+        {'NN011': convert.str_to_tren2(cords.NN011)},
+        {'NN008': convert.str_to_tren2(cords.NN008)},
+        {'NN009': convert.str_to_tren2(cords.NN009)},
+        {'RW29': convert.str_to_tren2(cords.RW29)}
 ]
 }
 
@@ -67,12 +68,12 @@ draw_route(file_name, 'KIZON1M', convert.to_gr(points.KIZON), convert.to_gr(rnav
 
 KIZON_1M = {
     'KIZON1M': [
-        {'KIZON': convert.to_gr_tren(points.KIZON)},
-        {'NN017': convert.to_gr_tren(rnav_points.NN017)},
-        {'NN011': convert.to_gr_tren(rnav_points.NN011)},
-        {'NN008': convert.to_gr_tren(rnav_points.NN008)},
-        {'NN009': convert.to_gr_tren(rnav_points.NN009)},
-        {'RW29': convert.to_gr_tren(points.RW29)}
+        {'KIZON': convert.str_to_tren2(cords.KIZON)},
+        {'NN017': convert.str_to_tren2(cords.NN017)},
+        {'NN011': convert.str_to_tren2(cords.NN011)},
+        {'NN008': convert.str_to_tren2(cords.NN008)},
+        {'NN009': convert.str_to_tren2(cords.NN009)},
+        {'RW29': convert.str_to_tren2(cords.RW29)}
 ]
 }
 
@@ -85,12 +86,12 @@ draw_route(file_name, 'NOKDA1M', convert.to_gr(points.NOKDA), convert.to_gr(rnav
 
 NOKDA_1M = {
     'NOKDA1M': [
-        {'NOKDA': convert.to_gr_tren(points.NOKDA)},
-        {'NN017': convert.to_gr_tren(rnav_points.NN017)},
-        {'NN011': convert.to_gr_tren(rnav_points.NN011)},
-        {'NN008': convert.to_gr_tren(rnav_points.NN008)},
-        {'NN009': convert.to_gr_tren(rnav_points.NN009)},
-        {'RW29': convert.to_gr_tren(points.RW29)}
+        {'NOKDA': convert.str_to_tren2(cords.NOKDA)},
+        {'NN017': convert.str_to_tren2(cords.NN017)},
+        {'NN011': convert.str_to_tren2(cords.NN011)},
+        {'NN008': convert.str_to_tren2(cords.NN008)},
+        {'NN009': convert.str_to_tren2(cords.NN009)},
+        {'RW29': convert.str_to_tren2(cords.RW29)}
 ]
 }
 
@@ -101,11 +102,11 @@ draw_route(file_name, 'GIGOR1M', convert.to_gr(points.GIGOR), convert.to_gr(rnav
 
 GIGOR_1M = {
     'GIGOR1M': [
-        {'GIGOR': convert.to_gr_tren(points.GIGOR)},
-        {'NN017': convert.to_gr_tren(rnav_points.NN012)},
-        {'NN008': convert.to_gr_tren(rnav_points.NN008)},
-        {'NN009': convert.to_gr_tren(rnav_points.NN009)},
-        {'RW29': convert.to_gr_tren(points.RW29)}
+        {'GIGOR': convert.str_to_tren2(cords.GIGOR)},
+        {'NN017': convert.str_to_tren2(cords.NN012)},
+        {'NN008': convert.str_to_tren2(cords.NN008)},
+        {'NN009': convert.str_to_tren2(cords.NN009)},
+        {'RW29': convert.str_to_tren2(cords.RW29)}
 ]
 }
 
@@ -116,11 +117,11 @@ draw_route(file_name, 'OSBET1M', convert.to_gr(points.OSBET), convert.to_gr(rnav
 
 OSBET_1M = {
     'OSBET1M': [
-        {'OSBET': convert.to_gr_tren(points.OSBET)},
-        {'NN013': convert.to_gr_tren(rnav_points.NN013)},
-        {'NN008': convert.to_gr_tren(rnav_points.NN008)},
-        {'NN009': convert.to_gr_tren(rnav_points.NN009)},
-        {'RW29': convert.to_gr_tren(points.RW29)}
+        {'OSBET': convert.str_to_tren2(cords.OSBET)},
+        {'NN013': convert.str_to_tren2(cords.NN013)},
+        {'NN008': convert.str_to_tren2(cords.NN008)},
+        {'NN009': convert.str_to_tren2(cords.NN009)},
+        {'RW29': convert.str_to_tren2(cords.RW29)}
 ]
 }
 
@@ -131,11 +132,11 @@ draw_route(file_name, 'LIRSA1M', convert.to_gr(points.LIRSA), convert.to_gr(rnav
 
 LIRSA_1M = {
     'LIRSA1M': [
-        {'LIRSA': convert.to_gr_tren(points.LIRSA)},
-        {'NN013': convert.to_gr_tren(rnav_points.NN013)},
-        {'NN008': convert.to_gr_tren(rnav_points.NN008)},
-        {'NN009': convert.to_gr_tren(rnav_points.NN009)},
-        {'RW29': convert.to_gr_tren(points.RW29)}
+        {'LIRSA': convert.str_to_tren2(cords.LIRSA)},
+        {'NN013': convert.str_to_tren2(cords.NN013)},
+        {'NN008': convert.str_to_tren2(cords.NN008)},
+        {'NN009': convert.str_to_tren2(cords.NN009)},
+        {'RW29': convert.str_to_tren2(cords.RW29)}
 ]
 }
 
@@ -146,11 +147,11 @@ draw_route(file_name, 'LEKBI1M', convert.to_gr(points.LEKBI), convert.to_gr(rnav
 
 LEKBI_1M = {
     'LEKBI1M': [
-        {'LEKBI': convert.to_gr_tren(points.LEKBI)},
-        {'NN013': convert.to_gr_tren(rnav_points.NN013)},
-        {'NN008': convert.to_gr_tren(rnav_points.NN008)},
-        {'NN009': convert.to_gr_tren(rnav_points.NN009)},
-        {'RW29': convert.to_gr_tren(points.RW29)}
+        {'LEKBI': convert.str_to_tren2(cords.LEKBI)},
+        {'NN013': convert.str_to_tren2(cords.NN013)},
+        {'NN008': convert.str_to_tren2(cords.NN008)},
+        {'NN009': convert.str_to_tren2(cords.NN009)},
+        {'RW29': convert.str_to_tren2(cords.RW29)}
 ]
 }
 
@@ -162,13 +163,13 @@ draw_route(file_name, 'RATNU1M', convert.to_gr(points.RATNU), convert.to_gr(rnav
 
 RATNU_1M = {
     'RATNU1M': [
-        {'RATNU': convert.to_gr_tren(points.RATNU)},
-        {'NN018': convert.to_gr_tren(rnav_points.NN018)},
-        {'NN019': convert.to_gr_tren(rnav_points.NN019)},
-        {'NN013': convert.to_gr_tren(rnav_points.NN013)},
-        {'NN008': convert.to_gr_tren(rnav_points.NN008)},
-        {'NN009': convert.to_gr_tren(rnav_points.NN009)},
-        {'RW29': convert.to_gr_tren(points.RW29)}
+        {'RATNU': convert.str_to_tren2(cords.RATNU)},
+        {'NN018': convert.str_to_tren2(cords.NN018)},
+        {'NN019': convert.str_to_tren2(cords.NN019)},
+        {'NN013': convert.str_to_tren2(cords.NN013)},
+        {'NN008': convert.str_to_tren2(cords.NN008)},
+        {'NN009': convert.str_to_tren2(cords.NN009)},
+        {'RW29': convert.str_to_tren2(cords.RW29)}
 ]
 }
 
@@ -180,13 +181,13 @@ draw_route(file_name, 'PIKUS1M', convert.to_gr(points.PIKUS), convert.to_gr(rnav
 
 PIKUS_1M = {
     'PIKUS1M': [
-        {'PIKUS': convert.to_gr_tren(points.PIKUS)},
-        {'NN018': convert.to_gr_tren(rnav_points.NN018)},
-        {'NN019': convert.to_gr_tren(rnav_points.NN019)},
-        {'NN013': convert.to_gr_tren(rnav_points.NN013)},
-        {'NN008': convert.to_gr_tren(rnav_points.NN008)},
-        {'NN009': convert.to_gr_tren(rnav_points.NN009)},
-        {'RW29': convert.to_gr_tren(points.RW29)}
+        {'PIKUS': convert.str_to_tren2(cords.PIKUS)},
+        {'NN018': convert.str_to_tren2(cords.NN018)},
+        {'NN019': convert.str_to_tren2(cords.NN019)},
+        {'NN013': convert.str_to_tren2(cords.NN013)},
+        {'NN008': convert.str_to_tren2(cords.NN008)},
+        {'NN009': convert.str_to_tren2(cords.NN009)},
+        {'RW29': convert.str_to_tren2(cords.RW29)}
 ]
 }
 
