@@ -22,16 +22,22 @@ gl_rad_up = points.glob_radius_sid1a_up
 file_name = 'uhnn_sid(1a)'
 
 try:
-    os.remove(f'{file_name}.sld')
+    os.remove(f'ROUTES/{file_name}.sld')
 except:
     pass
 
 file_name_tr = 'uhnn_sid(1a)_tr'
 
 try:
-    os.remove(f'{file_name_tr}.txt')
+    os.remove(f'KST_ROUTES/{file_name_tr}.txt')
 except:
     pass
+
+if not os.path.exists('ROUTES'):
+    os.makedirs('ROUTES')
+
+if not os.path.exists('KST_ROUTES'):
+    os.makedirs('KST_ROUTES')
 
 TEBSA = RoundRoute(start_point=start_point, start_bearing=108,
                    begin_arc=begin_arc, turn1='RIGHT', glob_center=gl_center_down, glob_rad=gl_rad_down,

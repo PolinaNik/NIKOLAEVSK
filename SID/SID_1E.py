@@ -28,6 +28,12 @@ try:
 except:
     pass
 
+if not os.path.exists('ROUTES'):
+    os.makedirs('ROUTES')
+
+if not os.path.exists('KST_ROUTES'):
+    os.makedirs('KST_ROUTES')
+
 TEBSA = ParalelRoute(start_point=start_point, start_bearing=108,
                      begin_arc=begin_arc, turn1='LEFT', glob_center=gl_center_up, glob_rad=gl_rad_up, kink=kinks.tebsa,
                      kink_bearing=290, turn2='RIGHT', end_bearing=347, end_point=points.TEBSA)

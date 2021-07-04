@@ -20,6 +20,12 @@ try:
 except:
     pass
 
+if not os.path.exists('ROUTES'):
+    os.makedirs('ROUTES')
+
+if not os.path.exists('KST_ROUTES'):
+    os.makedirs('KST_ROUTES')
+
 left_turn = RNAVRoute(start_point=rnav_points.NN003, start_bearing=198,
               begin_arc=rnav_points.NN003, turn1='LEFT', kink=rnav_points.NN005,
               kink_bearing=107).first_turn()

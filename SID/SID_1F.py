@@ -27,6 +27,12 @@ try:
 except:
     pass
 
+if not os.path.exists('ROUTES'):
+    os.makedirs('ROUTES')
+
+if not os.path.exists('KST_ROUTES'):
+    os.makedirs('KST_ROUTES')
+
 TOTRU = SimpleRoute(start_point=start_point, start_bearing=288,
                     begin_arc=begin_arc, turn="RIGHT", kink=kinks.totru, end_point=points.TOTRU)
 

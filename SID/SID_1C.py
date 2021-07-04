@@ -29,6 +29,12 @@ try:
 except:
     pass
 
+if not os.path.exists('ROUTES'):
+    os.makedirs('ROUTES')
+
+if not os.path.exists('KST_ROUTES'):
+    os.makedirs('KST_ROUTES')
+
 TEBSA = Route(start_point=start_point, start_bearing=288,
               begin_arc=begin_arc, turn1='RIGHT', kink=kinks.tebsa,
               kink_bearing=339, turn2='LEFT', end_bearing=310, end_point=points.TEBSA)

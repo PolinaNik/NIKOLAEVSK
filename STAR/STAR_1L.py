@@ -10,9 +10,15 @@ from instruments.add_trenajor import create_trenajor_file
 file_name = 'uhnn_star(1l)'
 
 try:
-    os.remove(f'{file_name}.sld')
+    os.remove(f'ROUTES/{file_name}.sld')
 except:
     pass
+
+if not os.path.exists('ROUTES'):
+    os.makedirs('ROUTES')
+
+if not os.path.exists('KST_ROUTES'):
+    os.makedirs('KST_ROUTES')
 
 trenajor = {}
 
