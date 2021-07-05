@@ -13,13 +13,13 @@ start_point = convert.str_to_gr('530917'), convert.str_to_gr('1403945')
 rad = points.rad_star_1g_29
 
 try:
-    os.remove(f'{file_name}.sld')
+    os.remove(f'ROUTES/{file_name}.sld')
 except:
     pass
 
 
 try:
-    os.remove(f'{file_name}.txt')
+    os.remove(f'KST_ROUTES/{file_name}.txt')
 except:
     pass
 

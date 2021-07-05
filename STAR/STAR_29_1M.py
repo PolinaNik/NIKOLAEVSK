@@ -10,7 +10,13 @@ from instruments.add_trenajor import create_trenajor_file
 file_name = 'uhnn_star_29_1M'
 
 try:
-    os.remove(f'{file_name}.sld')
+    os.remove(f'ROUTES/{file_name}.sld')
+except:
+    pass
+
+
+try:
+    os.remove(f'KST_ROUTES/{file_name}.txt')
 except:
     pass
 

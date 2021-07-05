@@ -14,6 +14,12 @@ try:
 except:
     pass
 
+
+try:
+    os.remove(f'KST_ROUTES/{file_name}.txt')
+except:
+    pass
+
 if not os.path.exists('ROUTES'):
     os.makedirs('ROUTES')
 

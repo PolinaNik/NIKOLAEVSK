@@ -98,7 +98,7 @@ def to_gr_tren(line):
 
 
 def str_to_tren(cord):
-    return f'{cord[1:3]}N:{cord[3:5]}:{cord[5:7]} E{cord[10:13]}:{cord[13:15]}:{cord[15:17]}E'
+    return f'{cord[1:3]}:{cord[3:5]}:{cord[5:7]}N {cord[10:13]}:{cord[13:15]}:{cord[15:17]}E'
 
 
 def str_to_tren2(cord):
