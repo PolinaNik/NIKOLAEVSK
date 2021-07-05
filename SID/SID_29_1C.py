@@ -15,17 +15,16 @@ gl_rad_down = points.glob_radius_sid1c_down
 gl_center_up = points.glob_center_sid1c_up
 gl_rad_up = points.glob_radius_sid1c_up
 
-file_name = 'uhnn_sid(1c)'
+file_name = 'uhnn_sid_29_1C'
 
 try:
     os.remove(f'{file_name}.sld')
 except:
     pass
 
-file_name_tr = 'uhnn_sid(1c)_tr'
 
 try:
-    os.remove(f'{file_name_tr}.txt')
+    os.remove(f'{file_name}.txt')
 except:
     pass
 
@@ -137,46 +136,46 @@ draw_route(file_name, 'PIKUS1C', convert.to_gr(start_point), convert.to_gr(begin
 
 #########################################################################################################
 
-draw_route_tr(file_name_tr, 'TEBSA1C', convert.to_gr(start_point), convert.to_gr(begin_arc), TEBSA.first_turn(),
+draw_route_tr(file_name, 'TEBSA1C', convert.to_gr(start_point), convert.to_gr(begin_arc), TEBSA.first_turn(),
            convert.to_gr(kinks.tebsa),
            TEBSA.second_turn(), convert.to_gr(points.TEBSA))
 
-draw_route_tr(file_name_tr, 'TOTRU1C', convert.to_gr(start_point), convert.to_gr(begin_arc), TOTRU.first_turn(),
+draw_route_tr(file_name, 'TOTRU1C', convert.to_gr(start_point), convert.to_gr(begin_arc), TOTRU.first_turn(),
            convert.to_gr(kinks.totru),
            TOTRU.second_turn(), convert.to_gr(points.TOTRU))
 
-draw_route_tr(file_name_tr, 'DOKIR1C', convert.to_gr(start_point), convert.to_gr(begin_arc), DOKIR.first_round(),
+draw_route_tr(file_name, 'DOKIR1C', convert.to_gr(start_point), convert.to_gr(begin_arc), DOKIR.first_round(),
            convert.to_gr(points.LOM),
            DOKIR.glob_round(), DOKIR.second_turn(), convert.to_gr(points.DOKIR))
 
-draw_route_tr(file_name_tr, 'KIZON1C', convert.to_gr(start_point), convert.to_gr(begin_arc), KIZON.first_round(),
+draw_route_tr(file_name, 'KIZON1C', convert.to_gr(start_point), convert.to_gr(begin_arc), KIZON.first_round(),
            convert.to_gr(points.LOM),
            convert.to_gr(points.KIZON))
 
-draw_route_tr(file_name_tr, 'NOKDA1C', convert.to_gr(start_point), convert.to_gr(begin_arc), NOKDA.first_round(),
+draw_route_tr(file_name, 'NOKDA1C', convert.to_gr(start_point), convert.to_gr(begin_arc), NOKDA.first_round(),
            convert.to_gr(points.LOM),
            convert.to_gr(points.NOKDA))
 
-draw_route_tr(file_name_tr, 'GIGOR1C', convert.to_gr(start_point), convert.to_gr(begin_arc), GIGOR.first_round(),
+draw_route_tr(file_name, 'GIGOR1C', convert.to_gr(start_point), convert.to_gr(begin_arc), GIGOR.first_round(),
            convert.to_gr(points.LOM),
            convert.to_gr(points.GIGOR))
 
-draw_route_tr(file_name_tr, 'OSBET1C', convert.to_gr(start_point), convert.to_gr(begin_arc), OSBET.first_round(),
+draw_route_tr(file_name, 'OSBET1C', convert.to_gr(start_point), convert.to_gr(begin_arc), OSBET.first_round(),
            convert.to_gr(points.LOM),
            convert.to_gr(points.OSBET))
 
-draw_route_tr(file_name_tr, 'LIRSA1C', convert.to_gr(start_point), convert.to_gr(begin_arc), LIRSA.first_round(),
+draw_route_tr(file_name, 'LIRSA1C', convert.to_gr(start_point), convert.to_gr(begin_arc), LIRSA.first_round(),
            convert.to_gr(points.LOM),
            LIRSA.glob_round(), LIRSA.second_turn(), convert.to_gr(points.LIRSA))
 
-draw_route_tr(file_name_tr, 'LEKBI1C', convert.to_gr(start_point), convert.to_gr(begin_arc), LEKBI.first_turn(),
+draw_route_tr(file_name, 'LEKBI1C', convert.to_gr(start_point), convert.to_gr(begin_arc), LEKBI.first_turn(),
            convert.to_gr(kinks.lekbi),
            LEKBI.second_turn(), convert.to_gr(points.LEKBI))
 
-draw_route_tr(file_name_tr, 'RATNU1C', convert.to_gr(start_point), convert.to_gr(begin_arc), RATNU.first_turn(),
+draw_route_tr(file_name, 'RATNU1C', convert.to_gr(start_point), convert.to_gr(begin_arc), RATNU.first_turn(),
            convert.to_gr(kinks.ratnu),
            RATNU.second_turn(), convert.to_gr(points.RATNU))
 
-draw_route_tr(file_name_tr, 'PIKUS1C', convert.to_gr(start_point), convert.to_gr(begin_arc), PIKUS.first_turn(),
+draw_route_tr(file_name, 'PIKUS1C', convert.to_gr(start_point), convert.to_gr(begin_arc), PIKUS.first_turn(),
            convert.to_gr(kinks.pikus),
            PIKUS.second_turn(), convert.to_gr(points.PIKUS))

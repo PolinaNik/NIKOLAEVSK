@@ -16,27 +16,29 @@ def fill_pnt(cords):
     for item in cords:
         for element in item:
             if element != []:
-                for cord in element:
-                    str_01 = '        <rec>\n'
-                    str_02 = f'            <c i="name" v="{item[0]}" />\n'
-                    str_03 = '            <c i="region" v="" />\n'
-                    str_04 = '            <c i="prizn" v="" />\n'
-                    str_05 = '            <c i="attr" v="" />\n'
-                    str_06 = '            <c i="base" v="" />\n'
-                    str_07 = f'            <c i="x" v="{item[1]}" />\n'
-                    str_08 = f'            <c i="y" v="{item[2]}" />\n'
-                    str_09 = '            <c i="kurs_lur" v="" />\n'
-                    str_10 = '            <c i="nmtrvzl" v="" />\n'
-                    str_11 = '            <c i="cmt" v="" />\n'
-                    str_12 = '            <c i="dmv" v="" />\n'
-                    str_13 = '        </rec>\n'
-                    lst = [str_01, str_02, str_03, str_04, str_05, str_06, str_07,
-                           str_08, str_09, str_10, str_11, str_12, str_13]
-                    yield lst
+                for num, cord in enumerate(element):
+                    if num != 0:
+                        line = cord.split(" ")
+                        str_01 = '        <rec>\n'
+                        str_02 = f'            <c i="name" v="{line[0]}" />\n'
+                        str_03 = '            <c i="region" v="" />\n'
+                        str_04 = '            <c i="prizn" v="" />\n'
+                        str_05 = '            <c i="attr" v="" />\n'
+                        str_06 = '            <c i="base" v="" />\n'
+                        str_07 = f'            <c i="x" v="{line[3]}" />\n'
+                        str_08 = f'            <c i="y" v="{line[4]}" />\n'
+                        str_09 = '            <c i="kurs_lur" v="" />\n'
+                        str_10 = '            <c i="nmtrvzl" v="" />\n'
+                        str_11 = '            <c i="cmt" v="" />\n'
+                        str_12 = '            <c i="dmv" v="" />\n'
+                        str_13 = '        </rec>\n'
+                        lst = [str_01, str_02, str_03, str_04, str_05, str_06, str_07,
+                               str_08, str_09, str_10, str_11, str_12, str_13]
+                        yield lst
 
-result = list(fill_pnt(new))
+result = list(fill_pnt(all_parts))
 
-with open('result_pnt.xml', 'w') as file:
+with open('STAR_points.xml', 'w') as file:
     for lst in result:
         for item in lst:
             file.write(item)
