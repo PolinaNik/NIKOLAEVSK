@@ -7,7 +7,7 @@ from instruments.draw_route import draw_route
 from instruments.draw_point import draw_point
 from instruments.add_trenajor import create_trenajor_file
 
-file_name = 'uhnn_star(1l)'
+file_name = 'uhnn_star_11_1L'
 
 try:
     os.remove(f'ROUTES/{file_name}.sld')

@@ -1,7 +1,7 @@
 import re
 from XML_files import converter as cv
-with open('pnt_04.xml', 'r') as file:
-    pnt_04 = file.readlines()
+import os
+
 
 with open('NN_points.py', 'r') as file:
     NN_points = file.readlines()
